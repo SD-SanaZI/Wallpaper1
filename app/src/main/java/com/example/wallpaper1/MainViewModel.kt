@@ -64,6 +64,7 @@ class MainViewModel : ViewModel() {
         _name.value = getName()
     }
 
+    //Возвращает имя страницы
     private fun getName(): String{
         return when(_onSettings.value){
             true -> "Settings"
@@ -77,6 +78,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
+    //Сохранение изображения из url на телефон
     fun saveImg(url:String?){
         if((database?.getUrlInfo(url ?: "")?.saved == false)){
             CoroutineScope(Dispatchers.IO).launch {
@@ -91,6 +93,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
+    //Установка изображения из url на фон телефона
     fun setImageToWallpaper(url:String?, context: Context){
         CoroutineScope(Dispatchers.IO).launch {
             val byteArrayUrl = URL(url).readBytes()

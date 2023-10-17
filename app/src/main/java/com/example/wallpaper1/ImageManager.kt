@@ -8,6 +8,7 @@ import java.io.FileOutputStream
 
 class ImageManager{
     companion object{
+        //Сохранение изображения image на телефоне под именем {name}.png
         fun download(image:Bitmap, name:String){
             val path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES+ "/Wallpaper01")
             if(!path.exists()) path.mkdirs()

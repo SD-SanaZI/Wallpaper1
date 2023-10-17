@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
 import com.example.wallpaper1.FragmentEvents
 import com.example.wallpaper1.MainViewModel
+import com.example.wallpaper1.NetManager
 import com.example.wallpaper1.databinding.FragmentCategoriesBinding
 import com.example.wallpaper1.ui.theme.Wallpaper1Theme
 
